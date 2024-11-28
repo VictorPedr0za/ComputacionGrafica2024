@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Education - Germinación de una planta</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./src/js/vectorCalcular.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Bio-Education</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="anatomia.html">Anatomía</a></li>
+            <li><a href="celula.html">Célula</a></li>
+            <li><a href="planta.html">Germinación de una planta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="course">
+            <h2>Bienvenido/a al curso de germinación de una planta</h2>
+            <p>Aquí aprenderás cómo se realiza la germinación y el sembrado de una planta. Atento a esta figura 3D, puedes interactuar con ella, girarla con tu mouse y hacerle zoom donde quieras.</p>
+            
+            <!-- Área de Drop -->
+            <div id="dropArea" ondrop="drop(event)" ondragover="allowDrop(event)" style="border: 2px dashed #007A33; padding: 20px; margin: 20px 0; text-align: center;">
+                <p>Arrastra la <strong>regadera</strong> a la planta para ver su crecimiento
+                    .</p>
+                <model-viewer 
+                    id="modelViewer" 
+                    src="./modelos/Plantas/Planta 1.glb" 
+                    alt="Modelo 3D de planta"
+                    style="height: 400px; width: 100%;"
+                    autoplay
+                    camera-controls>
+                </model-viewer>
+            </div>
+
+            <!-- Imagen para arrastrar -->
+            <img id="regadera" src="./src/img/regadera.png" alt="Regadera" draggable="true" ondragstart="drag(event)" style="width: 100px; cursor: grab;">
+
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Creado Por:</h4>
+                <p>Victor Manuel Pedroza</p>
+                <p>Santiago Ramirez Posso</p>
+            </div>
+            <div class="footer-column">
+                <h4>Código:</h4>
+                <p>120825</p>
+                <p>121377</p>
+            </div>
+            <div class="footer-column">
+                <h4>Nombre docente:</h4>
+                <p>Kelly Daniella Marin Montealagre</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto:</h4>
+                <p>vmpedrozah@correo.usbcali.edu.co</p>
+                <p>sramirezposso@correo.usbcali.edu.co</p>
+            </div>
+            <div class="footer-column">
+                <h4>Modelos</h4>
+                <p><a href="https://sketchfab.com/3d-models/skeleton-c5c20626d35e4689b2f2d23c5b262171">Esqueleto:</a> Huarguenn</p>
+                <p><a href="https://sketchfab.com/3d-models/eve3d-celula-eucariota-animal-fb3311da5c9a4572bda870f6d356d83a">Celula:</a> EVE3D UNAM</p>
+                <p>Planta y sus fases: Propio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

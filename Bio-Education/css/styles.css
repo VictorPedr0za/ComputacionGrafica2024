@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+body {
+    font-family: 'Fraunces', serif;
+    background-color: #B3D9BA;
+    color: #00561A;
+    margin: 0;
+    padding: 0;
+}
+
+ main {
+    background-color: #B3D9BA; 
+}
+
+.intro, header {
+    background-color: #B3D9BA;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #B3D9BA;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centrar la lista */
+}
+
+nav ul li {
+    display: inline-block; /* Cambiar a inline-block para permitir centrado */
+    margin: 0 10px; /* Espaciado entre elementos */
+    text-align: center; /* Centrar el texto dentro del li */
+}
+
+nav a {
+    color: #00561A;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    background-color: transparent; 
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
+    display: block; /* Hacer que el enlace ocupe todo el espacio del li */
+}
+
+nav a:hover {
+    transform: scale(1.1); 
+    color: #B3D9BA; 
+    background-color: #007A33;
+}
+
+nav a.active {
+    background-color: #B3D9BA;
+    color: #00561A;
+}
+
+.course {
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Activar flexbox */
+    flex-direction: column; /* Colocar los elementos en una columna */
+    align-items: center; /* Centrar los elementos horizontalmente */
+
+}
+
+footer {
+    background-color: #007A33;
+    color: white;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.description {
+    position: absolute;
+    background-color: #B3D9BA;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+    display: none; 
+}
+
+.quiz-button {
+    color: #00561A;
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    background-color: transparent; 
+    border: 2px solid #00561A; /* Bordes del botón */
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease; 
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    display: block; /* Hacer que el botón ocupe todo el ancho disponible */
+    margin: auto; /* Centrar el botón con margen automático */
+}
+
+.quiz-button:hover {
+    transform: scale(1.1); 
+    color: #B3D9BA; 
+    background-color: #007A33; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos generales para la sección del quiz */
+.quiz {
+    padding: 20px;
+    background-color: #709977;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.quiz h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-question {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-question label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-question input[type="radio"] {
+    margin-right: 20px;
+}
+#submitQuizButton {
+    background-color: #B3D9BA;
+}
+
+#submitQuizButton:hover {
+    background-color: #28a745;
+}
+
+.description {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+.carousel-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones de expansión */
+}
+
+/* Hacer las imágenes con la clase .large más grandes */
+.carousel-image.large img {
+    width: 300px;  /* Tamaño más grande */
+}
+
+/* Efecto de expansión cuando el cursor pasa por encima */
+.carousel-image:hover img {
+    transform: scale(1.1); /* Aumento del tamaño */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar un efecto de profundidad */
+}
+
+p a{
+    text-decoration: none;
+    color: #fff;
+}

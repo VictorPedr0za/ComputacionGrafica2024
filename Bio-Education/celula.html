@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Education - Germinación de una planta</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./src/js/vectorCalcular.js"></script>
+    <audio id="success-sound" src="audio/success.mp3" preload="auto"></audio>
+    <audio id="failure-sound" src="audio/failure.mp3" preload="auto"></audio>
+
+</head> 
+<body>
+    <header>
+        <h1>Bio-Education</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="anatomia.html">Anatomía</a></li>
+            <li><a href="celula.html">Célula</a></li>
+            <li><a href="planta.html" class="active">Germinación de una planta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="course">
+            <h2>Bienvenido/a al curso de la célula y sus partes</h2>
+            <p>Aquí aprenderás las principales partes de la célula eucariota. Atento a esta figura 3D, puedes interactuar con ella, girarla con tu mouse y hacerle zoom donde quieras.</p>
+           
+
+                                <model-viewer 
+                                    id="hotspot-camera-view-demo" 
+                                    src="./modelos/celula eucariota.glb" 
+                                    alt="Celula"
+                                    style="height: 100vh; width: 100%; position: relative; background: #B3D9BA"
+                                    autoplay
+                                    rotate 
+                                    ar 
+                                    shadow-intensity="1" 
+                                    camera-controls 
+                                    touch-action="pan-y"
+                                    orientation="-15deg 0deg -90deg">
+                                    
+                                    <button class="view-button" slot="hotspot-0" 
+                                    data-position="-5.5m 4m 5m" 
+                                    data-normal="-0.5829775m 0.2863482m -0.7603565m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-5m 3m 5m" 
+                                    data-description="El centriolo es un orgánulo que juega un papel crucial en la división celular.">
+                                        Centriolo
+                                    </button>      
+
+                                    <button class="view-button" slot="hotspot-1" 
+                                    data-position="-2.4m 5m 5m" 
+                                    data-normal="-1m 0.2863482m -0.7603565m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-2.4m 5m 5m" 
+                                    data-description="El núcleo contiene el material genético de la célula y controla sus actividades.">
+                                        Núcleo
+                                    </button> <button class="view-button" slot="hotspot-2" 
+                                    data-position="-2.7m 2m 7m" 
+                                    data-normal="-1m 0.2863482m 4m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-2.7m 2m 7m" 
+                                    data-description="El aparato de Golgi se encarga de modificar, clasificar y empaquetar proteínas.">
+                                        Aparato de Golgi
+                                    </button>   
+
+                                    <button class="view-button" slot="hotspot-3" 
+                                    data-position="-2.2m 0.3m 8m" 
+                                    data-normal="-1m 0.2863482m 4m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-2.2m 0.3m 8m" 
+                                    data-description="Las mitocondrias son las centrales energéticas de la célula, produciendo ATP.">
+                                        Mitocondria
+                                    </button> 
+
+                                    <button class="view-button" slot="hotspot-4" 
+                                    data-position="-1m 4.1m 6m" 
+                                    data-normal="-1m 0.2863482m -0.7603565m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-1m 4.1m 6m" 
+                                    data-description="El retículo endoplasmático es responsable de la síntesis de proteínas y lípidos.">
+                                        Retículo Endoplasmático
+                                    </button>   
+
+                                </model-viewer>
+
+                                <div class="description" id="descriptionBox"></div>
+
+                            
+                            </div>
+                        </div>
+                        
+                    </div>    
+            </div>
+            
+        </section>
+
+        
+        <section id="quiz-section" class="quiz" style="display: none;">
+            <h2>Quiz de la Célula Eucariota</h2>
+            <div id="quiz-container">
+                <!-- Las preguntas del quiz se insertarán aquí -->
+            </div>
+            <button id="submitQuizButton" class="quiz-button">Enviar Respuestas</button>
+        </section>
+        <button id="quizButton" class="quiz-button">Iniciar Quiz</button>
+        <br>
+
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Creado Por:</h4>
+                <p>Victor Manuel Pedroza</p>
+                <p>Santiago Ramirez Posso</p>
+            </div>
+            <div class="footer-column">
+                <h4>Código:</h4>
+                <p>120825</p>
+                <p>121377</p>
+            </div>
+            <div class="footer-column">
+                <h4>Nombre docente:</h4>
+                <p>Kelly Daniella Marin Montealagre</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto:</h4>
+                <p>vmpedrozah@correo.usbcali.edu.co</p>
+                <p>sramirezposso@correo.usbcali.edu.co</p>
+            </div>
+            <div class="footer-column">
+                <h4>Modelos</h4>
+                <p><a href="https://sketchfab.com/3d-models/skeleton-c5c20626d35e4689b2f2d23c5b262171">Esqueleto:</a> Huarguenn</p>
+                <p><a href="https://sketchfab.com/3d-models/eve3d-celula-eucariota-animal-fb3311da5c9a4572bda870f6d356d83a">Celula:</a> EVE3D UNAM</p>
+                <p>Planta y sus fases: Propio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

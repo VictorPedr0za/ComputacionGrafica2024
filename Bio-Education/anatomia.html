@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Education - Germinación de una planta</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="./src/js/vectorCalcular.js"></script>
+    <audio id="success-sound" src="audio/success.mp3" preload="auto"></audio>
+    <audio id="failure-sound" src="audio/failure.mp3" preload="auto"></audio>
+</head>
+<body>
+    <header>
+        <h1>Bio-Education</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="anatomia.html">Anatomía</a></li>
+            <li><a href="celula.html">Célula</a></li>
+            <li><a href="planta.html">Germinación de una planta</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="course">
+            <h2>Bienvenido/a al curso de anatomía básica.</h2>
+            <p>Aquí aprenderás las principales partes del cuerpo humano, empezando con la cara. Atento a esta figura 3D, puedes interactuar con ella, girarla con tu mouse y hacerle zoom donde quieras.</p>
+        
+            
+
+            <model-viewer 
+                                    id="hotspot-camera-view-demo" 
+                                    src="./modelos/skeleton.glb" 
+                                    alt="Celula"
+                                    style="height: 100vh; width: 100%; position: relative; background: #B3D9BA"
+                                    autoplay
+                                    rotate 
+                                    ar 
+                                    shadow-intensity="1" 
+                                    camera-controls 
+                                    touch-action="pan-y">
+                                    
+                                    
+                                    <button class="view-button" slot="hotspot-0" 
+                                    data-position="0.8m 9m 0m" 
+                                    data-normal="-0.5829775m 0.2863482m -0.7603565m" 
+                                    data-orbit="50deg 60deg 40deg" 
+                                    data-target="0.8m 9m 0m" 
+                                    data-description="Es el hueso que forma la estructura ósea de la cabeza, 
+                                                        protegiendo al cerebro y otros órganos sensoriales como los ojos y el oído interno. 
+                                                        Es una de las partes más esenciales del cuerpo en términos de protección..">
+                                        Cráneo
+                                    </button>      
+
+                                    <button class="view-button" slot="hotspot-1"     
+                                    data-position="1.3m 5m 0m" 
+                                    data-normal="-1m 0.2863482m -0.7603565m" 
+                                    data-orbit="40deg 60deg 40deg" 
+                                    data-target="1.3m 5m 0m" 
+                                    data-description="Forman parte de la caja torácica, que rodea y protege órganos vitales como el corazón y los pulmones. 
+                                    Estas estructuras óseas también desempeñan un papel importante en el proceso respiratorio,
+                                     ya que se expanden y contraen con los pulmones.">
+                                        Costillas
+                                    </button> 
+                                    
+                                    <button class="view-button" slot="hotspot-2" 
+                                    data-position="1.3m 1m 0m" 
+                                    data-normal="-1m 0.2863482m 4m" 
+                                    data-orbit="40deg 60deg 40deg" 
+                                    data-target="1.3m 1m 0m" 
+                                    data-description="Este es el hueso más largo y fuerte del cuerpo humano, ubicado en el muslo.
+                                                    Es fundamental para la movilidad y soporta el peso del 
+                                                    cuerpo durante actividades como caminar, correr o saltar.">
+                                        Fémur
+                                    </button>   
+
+                                    <button class="view-button" slot="hotspot-3" 
+                                    data-position="0m 5m -0.5m" 
+                                    data-normal="-1m 0.2863482m 4m" 
+                                    data-orbit="-180deg 60deg 40deg" 
+                                    data-target="0m 5m -0.5m" 
+                                    data-description="También conocida como columna vertebral, está compuesta por vértebras que protegen la 
+                                    médula espinal y proporcionan soporte al cuerpo. 
+                                    Además, permite una postura erguida y facilita el movimiento del torso.">
+                                        Espina dorsal
+                                    </button> 
+
+                                    <button class="view-button" slot="hotspot-4" 
+                                    data-position="-1m 3.5m 0m" 
+                                    data-normal="-1m 0.2863482m -0.7603565m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-1m 3.5m 0m" 
+                                    data-description="Esta estructura conecta el torso con las extremidades inferiores. 
+                                    Su diseño no solo distribuye el peso del cuerpo hacia las piernas, sino que también protege 
+                                    órganos internos como los de los sistemas reproductor y urinario.
+                                    Además, es una base de soporte para los músculos de las caderas y el abdomen.">
+                                        Pelvis
+                                    </button>   
+
+
+                                    <button class="view-button" slot="hotspot-5" 
+                                    data-position="-1m -1m 0m" 
+                                    data-normal="-1m 0.2863482m -0.7603565m" 
+                                    data-orbit="-30deg 60deg 40deg" 
+                                    data-target="-1m -1m 0m" 
+                                    data-description="La rodilla no es un hueso por sí misma, sino una articulación compleja que conecta 
+                                    el fémur con la tibia y está formada por estructuras óseas, ligamentos y cartílagos. 
+                                    Es crucial para la flexión y extensión de la pierna, permitiendo la locomoción.">
+                                        Rodilla
+                                    </button>   
+
+                                </model-viewer>
+
+
+                                <div class="description" id="descriptionBox"></div>
+
+
+
+
+
+        </section>
+
+        <section id="quiz-section" class="quiz" style="display: none;">
+            <h2>Quiz de Anatomía</h2>
+            <div id="quiz-container">
+                <!-- Las preguntas del quiz se insertarán aquí -->
+            </div>
+            <button id="submitQuizButton1" class="quiz-button">Enviar Respuestas</button>
+        </section>
+        <button id="quizButton1" class="quiz-button">Iniciar Quiz</button>
+        <br>
+
+
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Creado Por:</h4>
+                <p>Victor Manuel Pedroza</p>
+                <p>Santiago Ramirez Posso</p>
+            </div>
+            <div class="footer-column">
+                <h4>Código:</h4>
+                <p>120825</p>
+                <p>121377</p>
+            </div>
+            <div class="footer-column">
+                <h4>Nombre docente:</h4>
+                <p>Kelly Daniella Marin Montealagre</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto:</h4>
+                <p>vmpedrozah@correo.usbcali.edu.co
+                <p>sramirezposso@correo.usbcali.edu.co</p>
+                </p>
+            </div>
+                <div class="footer-column">
+                    <h4>Modelos</h4>
+                    <p><a href="https://sketchfab.com/3d-models/skeleton-c5c20626d35e4689b2f2d23c5b262171">Esqueleto:</a> Huarguenn</p>
+                    <p><a href="https://sketchfab.com/3d-models/eve3d-celula-eucariota-animal-fb3311da5c9a4572bda870f6d356d83a">Celula:</a> EVE3D UNAM</p>
+                    <p>Planta y sus fases: Propio</p>
+
+            </div>
+        </div>
+    </footer>
+    <script src="src/main.js"></script>
+</body>
+</html>
